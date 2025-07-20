@@ -1,39 +1,32 @@
-# Product Idea: FamilyTask AI
+# product idea: FamilyTask AI
 
-## Visión del Producto
-FamilyTask AI es una aplicación web y móvil que facilita la organización de tareas y responsabilidades compartidas dentro de familias o grupos de convivencia, apoyándose en recordatorios inteligentes impulsados por AI. Con pocas configuraciones, cualquier miembro puede asignar, priorizar y recibir notificaciones automáticas basadas en hábitos y disponibilidad de cada usuario.
+product: FamilyTask AI es una aplicación web y móvil para gestionar tareas familiares compartidas con recordatorios inteligentes de AI.
 
-## Tipos de Usuario y Casos de Uso
+## users
 
-1. **Padre/Madre Coordinador(a)**  
-   - Asigna tareas domésticas (compras, limpieza) a diferentes miembros.  
-   - Recibe recordatorios automáticos antes de cada actividad.  
-2. **Hijo(a) Adolescente**  
-   - Consulta su lista de responsabilidades diarias (deberes, cuidado de mascotas).  
-   - Marca tareas como completadas y recibe elogios virtuales.  
-3. **Roommate Independiente**  
-   - Gestiona facturas compartidas (luz, agua, internet).  
-   - Programa avisos de pago basados en fechas de vencimiento.  
-4. **Cuidador(a) Sénior**  
-   - Planifica y recuerda eventos médicos o citas.  
-   - Puede delegar notificaciones a miembros más jóvenes.  
-5. **Invitado/Ocasional**  
-   - Accede a tareas puntuales (regar plantas, alimentar mascotas) sin necesidad de registro profundo.  
-   - Recibe un enlace temporal y sólo ve lo necesario.
+1. Padre/Madre Coordinador(a)  
+   - Asigna tareas domésticas (compras, limpieza) y recibe recordatorios automáticos.  
+2. Hijo(a) Adolescente  
+   - Consulta tareas diarias, marca como completadas y recibe elogios virtuales.  
+3. Roommate Independiente  
+   - Gestiona facturas compartidas y programa avisos de pago.  
+4. Cuidador(a) Sénior  
+   - Planifica citas médicas y delega notificaciones a familiares jóvenes.  
+5. Invitado/Ocasional  
+   - Accede a tareas puntuales con un enlace temporal sin registro.
 
-## Características Clave y Diferenciadores
+## features
 
-- **Recordatorios Inteligentes**: El motor de AI agrupa y reprograma tareas según la carga de trabajo y hábitos de los usuarios.  
-- **Asignaciones Flexibles**: Permite reasignar tareas en un clic y redistribuir automáticamente si alguien está sobrecargado.  
-- **Gamificación Ligera**: Puntos y badges para motivar el cumplimiento, con ranking familiar opcional.  
-- **Enlaces de Invitado**: Usuarios ocasionales pueden unirse con un enlace QR sin necesidad de crear cuenta.  
-- **Integraciones**: Con calendarios (Google, Outlook) y asistentes de voz (Alexa, Google Assistant) para notificaciones habladas.
+- Recordatorios Inteligentes: AI agrupa y reprograma tareas según hábitos.  
+- Asignaciones Flexibles: Reasignación automática de tareas.  
+- Gamificación Ligera: Puntos y badges para motivación.  
+- Enlaces de Invitado: Acceso por QR sin cuenta.  
+- Integraciones: Calendarios (Google, Outlook) y asistentes de voz.
 
 ## Restricciones y Requisitos
 
-- **Plataforma**: Web React + Responsive; apps nativas iOS/Android (opcional fase 2).  
-- **Autenticación**: Opción de Single Sign-On (familia) o enlaces de invitado sin login.  
-- **Persistencia**: Base de datos en la nube (Firebase o AWS DynamoDB).  
-- **Privacidad**: Datos cifrados end-to-end; control granular de permisos por tarea.  
-- **Offline-First**: Sincronización automática al reconectar para accesos esporádicos.
-
+- Plataforma: Web React responsive; apps iOS/Android en fase 2.  
+- Autenticación: SSO familiar o enlaces de invitado.  
+- Persistencia: Firebase o AWS DynamoDB.  
+- Privacidad: Cifrado end-to-end; permisos granulares.  
+- Offline-First: Sincronización automática al reconectar.  
