@@ -59,7 +59,7 @@ Sin embargo, la **accessibility** (promedio score: 3.3/5) necesita mejoras en co
 
 ---
 
-## 5. Recommendations & Next Steps
+## 5. recommendations & Next Steps
 
 1. **Increase Contrast**  
    - Aumentar el contraste de cards y FAB para alcanzar WCAG 2.1 AA.  
