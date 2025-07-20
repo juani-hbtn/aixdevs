@@ -10,6 +10,9 @@ flowchart LR
 
   subgraph Datastore
     D[(DynamoDB)]
+    subgraph Cache
+      G[DAX (DynamoDB Accelerator)]
+    end
   end
 
   subgraph AIEngine
@@ -24,7 +27,11 @@ flowchart LR
   B --> C
   C --> D
   C -->|Invoke| E
+  C --> G
   F --> C
 
   click D "https://aws.amazon.com/dynamodb/" "DynamoDB"
   click E "https://aws.amazon.com/sagemaker/" "AI Model Endpoint"
+
+   C --> D
++  C --> G

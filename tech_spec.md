@@ -17,7 +17,10 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
    - Uses Amazon SageMaker endpoint or OpenAI API for smart scheduling  
 5. **Auth & Security**  
    - AWS Cognito for user pools and guest links  
-   - JWT tokens for API calls  
+   - Guest links as single-use UUID v4 tokens:  
+     - Stored (hashed) in DynamoDB  
+     - Expires 1 hour after issue or on first use  
+     - JWT scope limited to `assignments:read-write`  
 6. **Integrations**  
    - Calendar sync microservice (Lambda)  
    - Voice-assistant connector (Lambda + Alexa/Google Assistant SDK)
@@ -31,6 +34,10 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 | name         | string  |                                        |
 | email        | string  |                                        |
 | role         | enum    | [`PARENT`,`TEEN`,`ROOMMATE`,`CAREGIVER`,`GUEST`] |
+| createdAt    | ISODate | Timestamp de creación                  |
+| updatedAt    | ISODate | Timestamp de última modificación       |
+| createdBy    | string  | FK → Users.userId                      |
+| updatedBy    | string  | FK → Users.userId                      |
 
 ### Tasks
 | Attribute     | Type     | Notes                              |
@@ -40,7 +47,9 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 | description   | string   |                                    |
 | dueDate       | ISODate  |                                    |
 | createdBy     | string   | FK → Users.userId                  |
-| status        | enum     | [`PENDING`,`COMPLETED`,`CANCELLED`]|
+| createdAt     | ISODate  | Timestamp de creación              |
+| updatedAt     | ISODate  | Timestamp de última modificación   |
+| status        | enum     | [`PENDING`,`COMPLETED`,`CANCELLED`]|  
 
 ### Assignments
 | Attribute | Type   | Notes                           |
@@ -75,7 +84,7 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 
 ## 5. Technology Justification
 
-- **Serverless (Lambda + API Gateway)**: scales elastically, only pay-per-execution  
+- **Serverless (Lambda + API Gateway)**: scales elastically, pay-per-execution  
 - **DynamoDB**: single-digit millisecond reads/writes, auto-sharding  
 - **Cognito**: built-in user pools + temporary guest links  
 - **S3 + CloudFront**: global CDN for static front-end at low cost  
@@ -89,3 +98,10 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 - **Security**: end-to-end encryption (HTTPS + DynamoDB encryption at rest)  
 - **Privacy**: user data segmented per family; guest data auto-deleted after 7 days
 
+## 7. AI Reminder Engine
+
+- AWS Lambda scheduled via EventBridge  
+- Mitigations for high-volume firing:  
+  - Batch invocation (1 000 reminders per invocation)  
+  - SNS + SQS buffer between scheduler and processors  
+  - Exponential backoff and DLQ for failed reminders  
