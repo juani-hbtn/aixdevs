@@ -12,7 +12,7 @@ En esta **evaluation** aplicamos los principios de **heuristics** de Nielsen par
 | Error Prevention         | Diseño que evita errores críticos (ej. confirmación al borrar).                                     |
 | Recognition Rather Than Recall | Elementos visibles que reducen la carga de memoria.                                          |
 | Flexibility and Efficiency of Use | Atajos como swipe-to-delete y FAB para usuarios avanzados.                              |
-| Aesthetic and Minimalist Design | Jerarquía visual limpia, sin información superflua.                                        |
+| Aesthetic and Minimalist design | Jerarquía visual limpia, sin información superflua.                                        |
 | Help Users Recognize, Diagnose and Recover from Errors | Mensajes de error claros y útiles.                    |
 | **Accessibility**         | Contraste WCAG ≥4.5:1, tamaño de fuente ≥16sp, áreas táctiles ≥48dp.                              |
 
