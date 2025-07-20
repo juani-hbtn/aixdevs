@@ -28,27 +28,27 @@ En esta **evaluation** aplicamos los principios de **heuristics** de Nielsen par
 
 ---
 
-## 3. Detailed Usability Findings & Improvements
+## 3. Detailed Usability Findings & improvements
 
 - **Visual Hierarchy** (score: 4/5)  
   - Balance y presupuesto resaltan; el FAB podría usar un color más intenso.  
-  - **Improvement:** Ajustar la paleta para aumentar el contraste de los cards.  
+  - **improvement:** Ajustar la paleta para aumentar el contraste de los cards.  
 
 - **Consistency** (score: 5/5)  
   - Tipografía, iconografía y espaciados uniformes en todas las pantallas.  
-  - **Improvement:** Ninguna acción inmediata requerida.  
+  - **improvement:** Ninguna acción inmediata requerida.  
 
 - **Learnability & Flow** (score: 4/5)  
   - Flujo Dashboard → Add → History intuitivo.  
-  - **Improvement:** Agregar micro-interacciones (p.ej., confirmación visual al guardar).  
+  - **improvement:** Agregar micro-interacciones (p.ej., confirmación visual al guardar).  
 
 - **Accessibility** (score: 3/5)  
   - Texto secundario (<16sp) y contraste de elementos crítico bajo WCAG.  
-  - **Improvement:** Aumentar tamaño de texto secundario y reforzar contraste según WCAG AA.  
+  - **improvement:** Aumentar tamaño de texto secundario y reforzar contraste según WCAG AA.  
 
 - **Error Prevention** (score: 5/5)  
   - Acciones de borrado requieren confirmación; evita pérdidas accidentales.  
-  - **Improvement:** Añadir mensajes inline para campos del formulario.
+  - **improvement:** Añadir mensajes inline para campos del formulario.
 
 ---
 
@@ -63,21 +63,21 @@ Sin embargo, la **accessibility** (promedio score: 3.3/5) necesita mejoras en co
 
 1. **Increase Contrast**  
    - Aumentar el contraste de cards y FAB para alcanzar WCAG 2.1 AA.  
-   - **Improvement:** Actualizar color primario y secundario en el sistema de diseño.
+   - **improvement:** Actualizar color primario y secundario en el sistema de diseño.
 
 2. **Enhance Touch Targets**  
    - Verificar que todos los botones y elementos interactivos sean ≥48dp.  
-   - **Improvement:** Revisar componentes y ajustar padding o margin.
+   - **improvement:** Revisar componentes y ajustar padding o margin.
 
 3. **Augment Visual Distinction**  
    - Alternar fondos de fila o insertar separadores en History para mejorar legibilidad.  
-   - **Improvement:** Implementar “zebra stripes” o divider components.
+   - **improvement:** Implementar “zebra stripes” o divider components.
 
 4. **Provide Contextual Help**  
    - Agregar tooltips o helper texts en campos del formulario.  
-   - **Improvement:** Incluir textos breves bajo cada TextField.
+   - **improvement:** Incluir textos breves bajo cada TextField.
 
 5. **Conduct User Testing**  
    - Planificar sesiones de usabilidad para validar flujo y accesibilidad.  
-   - **Improvement:** Recoger feedback de usuarios reales y ajustar iterativamente.
+   - **improvement:** Recoger feedback de usuarios reales y ajustar iterativamente.
 
