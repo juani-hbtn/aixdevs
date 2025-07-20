@@ -33,7 +33,7 @@
 
 ---
 
-## 3. Key technical Decisions and Architecture
+## 3. Key technical Decisions and architecture
 
 - **Frontend:** React + TypeScript (hosted on S3 + CloudFront) for responsive UI.  
 - **API Layer:** AWS Lambda (Node.js) + API Gateway for a fully serverless backend.  
