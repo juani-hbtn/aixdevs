@@ -13,7 +13,7 @@
 
 ---
 
-## 2. User Stories Overview and Prioritization
+## 2. User stories Overview and Prioritization
 
 ### MVP (High Priority)
 1. **As a Parent Coordinator, I want to assign tasks**, so that responsibilities are clearly distributed.  
