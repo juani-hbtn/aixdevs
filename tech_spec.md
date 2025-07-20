@@ -23,7 +23,7 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
      - JWT scope limited to `assignments:read-write`  
 6. **Integrations**  
    - Calendar sync microservice (Lambda)  
-   - Voice-assistant connector (Lambda + Alexa/Google Assistant SDK)
+   - Voice-assistant connector (Lambda + Alexa/Google Assistant SDK)  
 
 ## 3. Data Models
 
@@ -33,7 +33,7 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 | userId       | string  | Primary key                            |
 | name         | string  |                                        |
 | email        | string  |                                        |
-| role         | enum    | [`PARENT`,`TEEN`,`ROOMMATE`,`CAREGIVER`,`GUEST`] |
+| role         | enum    | `PARENT`, `TEEN`, `ROOMMATE`, `CAREGIVER`, `GUEST` |
 | createdAt    | ISODate | Timestamp de creación                  |
 | updatedAt    | ISODate | Timestamp de última modificación       |
 | createdBy    | string  | FK → Users.userId                      |
@@ -49,7 +49,7 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 | createdBy     | string   | FK → Users.userId                  |
 | createdAt     | ISODate  | Timestamp de creación              |
 | updatedAt     | ISODate  | Timestamp de última modificación   |
-| status        | enum     | [`PENDING`,`COMPLETED`,`CANCELLED`]|  
+| status        | enum     | `PENDING`, `COMPLETED`, `CANCELLED`|
 
 ### Assignments
 | Attribute | Type   | Notes                           |
@@ -65,7 +65,7 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 | notifyId      | string   | Primary key                             |
 | assignId      | string   | FK → Assignments.assignId               |
 | scheduledFor  | ISODate  | When the AI plans to send the reminder |
-| status        | enum     | [`SCHEDULED`,`SENT`,`SNOOZED`,`FAILED`] |
+| status        | enum     | `SCHEDULED`, `SENT`, `SNOOZED`, `FAILED`|
 
 ## 4. API Endpoints
 
@@ -88,15 +88,15 @@ FamilyTask AI is built as a responsive web application (React) backed by a serve
 - **DynamoDB**: single-digit millisecond reads/writes, auto-sharding  
 - **Cognito**: built-in user pools + temporary guest links  
 - **S3 + CloudFront**: global CDN for static front-end at low cost  
-- **SageMaker/OpenAI**: flexible AI model hosting for reminder logic
+- **SageMaker/OpenAI**: flexible AI model hosting for reminder logic  
 
 ## 6. Constraints & Non-Functional Requirements
 
 - **Mobile-first**: ensure UI/UX works on phones/tablets  
 - **Availability**: 99.9% API uptime via AWS SLA  
-- **Latency**: API calls <150 ms p99; notification engine completes scheduling within 1 min  
+- **Latency**: API calls < 150 ms p99; notification engine completes scheduling within 1 min  
 - **Security**: end-to-end encryption (HTTPS + DynamoDB encryption at rest)  
-- **Privacy**: user data segmented per family; guest data auto-deleted after 7 days
+- **Privacy**: user data segmented per family; guest data auto-deleted after 7 days  
 
 ## 7. AI Reminder Engine
 
