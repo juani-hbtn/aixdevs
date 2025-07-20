@@ -1,0 +1,48 @@
+cat > errors.json << 'EOF'
+{
+  "errors": [
+    {
+      "language": "Python",
+      "type": "Syntax Error",
+      "code": "def greet(name):\n    print(\"Hello, \" + name)\n    return\n  print(\"This line is misindented\")",
+      "error_message": "IndentationError: unindent does not match any outer indentation level",
+      "description": "La intención era definir una función `greet` que imprime un saludo y luego ejecutar un `print` fuera de ella. Sin embargo, la línea con `print(\"This line is misindented\")` tiene una indentación errónea."
+    },
+    {
+      "language": "Python",
+      "type": "Runtime/Logical Error",
+      "code": "def divide(a, b):\n    return a / b\n\nresult = divide(10, 0)\nprint(\"Result is\", result)",
+      "error_message": "ZeroDivisionError: division by zero",
+      "description": "La función `divide` está diseñada para devolver el cociente de `a` entre `b`. Pasar `b=0` provoca un error en tiempo de ejecución (división por cero)."
+    },
+    {
+      "language": "JavaScript",
+      "type": "Syntax Error",
+      "code": "function sayHello(name) {\n  console.log(\"Hello, \" + name);\n// Falta la llave de cierre\n\nsayHello(\"World\");",
+      "error_message": "SyntaxError: Unexpected end of input",
+      "description": "Se omitió la llave `}` de cierre de la función `sayHello`, lo que causa un error de sintaxis al analizar el código."
+    },
+    {
+      "language": "JavaScript",
+      "type": "Runtime/Logical Error",
+      "code": "let numbers = [1, 2, 3];\nlet total = 0;\nfor (let i = 0; i <= numbers.length; i++) {\n  total += numbers[i];\n}\nconsole.log(\"Total:\", total);",
+      "error_message": "TypeError: numbers[i] is undefined",
+      "description": "La intención era sumar todos los elementos del array `numbers`, pero el bucle itera de `0` a `numbers.length` inclusive, accediendo a `numbers[3]`, que no existe."
+    },
+    {
+      "language": "Java",
+      "type": "Syntax Error",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\")  // Falta punto y coma\n    }\n}",
+      "error_message": "Main.java:3: error: ';' expected\n        System.out.println(\"Hello, Java!\")\n                                         ^\n1 error",
+      "description": "El `println` carece de punto y coma al final, lo que provoca un error de sintaxis en la compilación."
+    },
+    {
+      "language": "Java",
+      "type": "Runtime/Logical Error",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String text = null;\n        System.out.println(text.length());\n    }\n}",
+      "error_message": "Exception in thread \"main\" java.lang.NullPointerException\n        at Main.main(Main.java:4)",
+      "description": "Se intenta invocar `length()` sobre una referencia `String` nula, lo que genera una excepción en tiempo de ejecución."
+    }
+  ]
+}
+EOF
