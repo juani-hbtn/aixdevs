@@ -1,0 +1,30 @@
+flowchart LR
+  subgraph Frontend
+    A[React App] 
+  end
+
+  subgraph API
+    B[API Gateway]
+    C[AWS Lambda Functions]
+  end
+
+  subgraph Datastore
+    D[(DynamoDB)]
+  end
+
+  subgraph AIEngine
+    E[SageMaker / OpenAI API]
+  end
+
+  subgraph Scheduler
+    F[EventBridge Scheduler]
+  end
+
+  A -->|HTTPS| B
+  B --> C
+  C --> D
+  C -->|Invoke| E
+  F --> C
+
+  click D "https://aws.amazon.com/dynamodb/" "DynamoDB"
+  click E "https://aws.amazon.com/sagemaker/" "AI Model Endpoint"
