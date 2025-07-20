@@ -1,38 +1,34 @@
-# UI Concept: ExpenseTracker
+# ui_concept.md
 
 ## product overview
-ExpenseTracker is a mobile-first web and iOS/Android application that enables individuals to record, categorize, and visualize their daily expenses in real time. By providing clear budget summaries and interactive charts, it helps users stay on top of their spending habits and make informed financial decisions.
+ExpenseTracker is a mobile-first web and iOS/Android application that enables individuals to record, categorize, and visualize their daily expenses in real time. By providing clear budget summaries and interactive charts, this product helps users stay on top of their spending habits and make informed financial decisions.
 
-## Target users
-- **Young Professionals** managing salary and lifestyle costs  
-- **College Students** tracking tight monthly budgets  
-- **Freelancers** monitoring project-related expenses  
-- **Families** sharing household expenses  
+## workflow
+A user logs in and lands on the **Dashboard**, sees current balance and budget progress, then taps “Add Expense” to record a new transaction. They can swipe through past entries on the **History** screen, set or adjust budgets on the **Budget** screen, and view detailed charts on the **Reports** screen.
 
-## Core UI Elements / screens
+## interface elements
+- **Overview Cards:** Show balance, monthly budget vs. spend, recent transactions.  
+- **Floating Action Button:** “+ Add Expense” consistently available.  
+- **Form Controls:** Input fields for amount, category selector, date picker, notes.  
+- **Filter Bar:** Date range and category filters on history.  
+- **Charts & Progress Bars:** Interactive pie/bar charts and budget progress visuals.
+
+## screens
 1. **Dashboard Screen**  
-   - Overview cards for current balance, monthly budget vs. spend, and recent transactions  
-   - Quick “Add Expense” button prominently displayed  
+   - Shows Overview Cards and “Add Expense” FAB.  
 2. **Add Expense Screen**  
-   - Form fields for amount, category (selectable icon), date, and optional notes  
-   - Ability to attach or photograph receipt  
-3. **Expenses History Screen**  
-   - Scrollable list of past transactions with date, amount, and category icon  
-   - Filter bar for date range and category; swipe-to-edit or delete gestures  
-4. **Budget Overview Screen**  
-   - Interactive progress bars per category showing spend vs. budget  
-   - “Set Budget” controls for each category  
+   - Full-screen form with form controls and receipt capture.  
+3. **History Screen**  
+   - Scrollable list of transactions, swipe-to-edit/delete, filter bar.  
+4. **Budget Screen**  
+   - Progress bars per category with “Set Budget” controls.  
 5. **Reports Screen**  
-   - Pie and bar charts visualizing spend by category and over time  
-   - Toggle between weekly, monthly, and custom date ranges  
-6. **Settings & Profile Screen**  
-   - Manage custom categories and currency preferences  
-   - Data export (CSV/PDF) and notification settings  
+   - Pie and bar charts with time-range toggles (weekly, monthly, custom).
 
-## Expected user actions
-- **Create Expense:** Enter amount, pick category, add notes, save.  
-- **View History:** Scroll and filter transactions by date or category.  
-- **Edit/Delete Expense:** Swipe on a transaction to modify or remove.  
-- **Set Budgets:** Define or adjust monthly limits per category.  
-- **Analyze Reports:** Switch chart types and timeframes to understand spending.  
-- **Export Data:** Download expense history as CSV or PDF for records.
+## user actions
+- **Create Expense:** Tap FAB, fill form, save.  
+- **View History:** Scroll and filter transactions.  
+- **Edit/Delete Expense:** Swipe left/right on a history item.  
+- **Set Budget:** Adjust category limits on Budget screen.  
+- **Analyze Reports:** Switch chart types and timeframes.  
+- **Export Data:** Download CSV/PDF from Settings screen.  
