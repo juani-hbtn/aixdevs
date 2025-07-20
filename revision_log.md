@@ -11,7 +11,7 @@ Este documento recoge todas las iteraciones de revisión de los artefactos `tech
 > 1. What audit fields are missing?  
 > 2. How would you optimize for high-volume queries (1M+ users)?  
 
-**AI Response**  
+**AI response**  
 1. Faltan campos de auditoría: `createdAt`, `updatedAt`, `createdBy`, `updatedBy` en todas las entidades.  
 2. Sugiere Global Secondary Indexes (GSIs) en DynamoDB:  
    - GSI por `Tasks.createdBy`  
