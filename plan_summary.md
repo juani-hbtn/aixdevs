@@ -2,7 +2,7 @@
 
 ---
 
-## 1. Product Vision and Goals
+## 1. Product vision and Goals
 
 **FamilyTask AI** is a cross-platform web and mobile application that helps families and shared households assign, track, and complete chores collaboratively. Leveraging AI-driven reminders and light gamification, it ensures:
 
