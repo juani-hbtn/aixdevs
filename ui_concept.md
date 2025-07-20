@@ -1,15 +1,15 @@
 # UI Concept: ExpenseTracker
 
-## Purpose
+## product overview
 ExpenseTracker is a mobile-first web and iOS/Android application that enables individuals to record, categorize, and visualize their daily expenses in real time. By providing clear budget summaries and interactive charts, it helps users stay on top of their spending habits and make informed financial decisions.
 
-## Target Users
+## Target users
 - **Young Professionals** managing salary and lifestyle costs  
 - **College Students** tracking tight monthly budgets  
 - **Freelancers** monitoring project-related expenses  
 - **Families** sharing household expenses  
 
-## Core UI Elements / Screens
+## Core UI Elements / screens
 1. **Dashboard Screen**  
    - Overview cards for current balance, monthly budget vs. spend, and recent transactions  
    - Quick “Add Expense” button prominently displayed  
@@ -29,7 +29,7 @@ ExpenseTracker is a mobile-first web and iOS/Android application that enables in
    - Manage custom categories and currency preferences  
    - Data export (CSV/PDF) and notification settings  
 
-## Expected User Actions
+## Expected user actions
 - **Create Expense:** Enter amount, pick category, add notes, save.  
 - **View History:** Scroll and filter transactions by date or category.  
 - **Edit/Delete Expense:** Swipe on a transaction to modify or remove.  
