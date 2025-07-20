@@ -1,4 +1,4 @@
-# Revision Log for “Review & Refine with AI”
+# revision Log for “Review & Refine with AI”
 
 Este documento recoge todas las iteraciones de revisión de los artefactos `tech_spec.md` y `system_architecture.mmd`. Cada sección incluye el prompt enviado al AI, la respuesta recibida y los cambios aplicados.
 
