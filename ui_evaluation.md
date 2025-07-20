@@ -1,6 +1,6 @@
 # UI Evaluation and Usability Report
 
-## 1. Heuristic Evaluation and Usability Criteria
+## 1. Heuristic Evaluation, Usability & Accessibility Criteria
 En esta **evaluation** aplicamos los principios de **heuristics** de Nielsen para valorar la **usability** de las pantallas v3 y comprobar la **accessibility**.
 
 | Criterion               | Description                                                                                          |
@@ -18,42 +18,66 @@ En esta **evaluation** aplicamos los principios de **heuristics** de Nielsen par
 
 ---
 
-## 2. Screen-by-Screen Usability Evaluation
+## 2. Screen-by-Screen Scorecard
 
-| Screen           | Visual Hierarchy | Consistency | Learnability | Accessibility | Notes                                                   |
-|------------------|------------------|-------------|--------------|---------------|---------------------------------------------------------|
-| **Dashboard**    | 4/5              | 5/5         | 4/5          | 3/5           | FAB destacada; mejorar contraste de tarjetas.           |
-| **Add Expense**  | 5/5              | 5/5         | 5/5          | 4/5           | Formulario claro; buen contraste en campos y botones.   |
-| **History**      | 4/5              | 4/5         | 4/5          | 3/5           | Agrupación por fecha útil; filas necesitan más contraste.|
-
----
-
-## 3. Detailed Usability Findings
-
-- **Visual Hierarchy:**  
-  - Balance y presupuesto resaltan; FAB necesita color más fuerte.  
-- **Consistency:**  
-  - Tipografía e iconografía uniformes, mejora en v3 con bottom nav.  
-- **Learnability & Flow:**  
-  - Flujo Dashboard → Add → History es muy intuitivo.  
-- **Accessibility:**  
-  - Texto secundario (<16sp) y contraste de tarjetas deben ajustarse.  
-- **Error Prevention:**  
-  - Incluir confirmación al eliminar desde History reduce errores.
+| Screen        | Visual Hierarchy (score) | Consistency (score) | Learnability (score) | Accessibility (score) | Improvements Needed         |
+|---------------|--------------------------|---------------------|----------------------|-----------------------|-----------------------------|
+| **Dashboard** | 4/5                      | 5/5                 | 4/5                  | 3/5                   | Mejorar contraste de tarjetas |
+| **Add Expense**| 5/5                     | 5/5                 | 5/5                  | 4/5                   | —                           |
+| **History**   | 4/5                      | 4/5                 | 4/5                  | 3/5                   | Mayor distinción visual de filas |
 
 ---
 
-## 4. Overall Usability and Accessibility Evaluation
+## 3. Detailed Usability Findings & Improvements
 
-La **usability** general es alta gracias a la claridad y consistencia visual.  
-No obstante, se requiere reforzar la **accessibility** ajustando contraste y tamaños para cumplir heuristics de accesibilidad.
+- **Visual Hierarchy** (score: 4/5)  
+  - Balance y presupuesto resaltan; el FAB podría usar un color más intenso.  
+  - **Improvement:** Ajustar la paleta para aumentar el contraste de los cards.  
+
+- **Consistency** (score: 5/5)  
+  - Tipografía, iconografía y espaciados uniformes en todas las pantallas.  
+  - **Improvement:** Ninguna acción inmediata requerida.  
+
+- **Learnability & Flow** (score: 4/5)  
+  - Flujo Dashboard → Add → History intuitivo.  
+  - **Improvement:** Agregar micro-interacciones (p.ej., confirmación visual al guardar).  
+
+- **Accessibility** (score: 3/5)  
+  - Texto secundario (<16sp) y contraste de elementos crítico bajo WCAG.  
+  - **Improvement:** Aumentar tamaño de texto secundario y reforzar contraste según WCAG AA.  
+
+- **Error Prevention** (score: 5/5)  
+  - Acciones de borrado requieren confirmación; evita pérdidas accidentales.  
+  - **Improvement:** Añadir mensajes inline para campos del formulario.
 
 ---
 
-## 5. Recommendations and Next Steps
+## 4. Overall Usability & Accessibility Evaluation
 
-1. **Incrementar contraste** en tarjetas y FAB para cumplir WCAG.  
-2. **Aumentar tamaño de texto** secundario y controles táctiles (≥48dp).  
-3. **Añadir ayuda contextual** (tooltips, mensajes inline).  
-4. **Realizar pruebas de usuario** focalizadas en accesibilidad y navegación.
+La **usability** general (promedio score: 4.2/5) es alta gracias a la consistencia y claridad de la interfaz.  
+Sin embargo, la **accessibility** (promedio score: 3.3/5) necesita mejoras en contraste y tamaños de fuente para cumplir los estándares de **accessibility**.
+
+---
+
+## 5. Recommendations & Next Steps
+
+1. **Increase Contrast**  
+   - Aumentar el contraste de cards y FAB para alcanzar WCAG 2.1 AA.  
+   - **Improvement:** Actualizar color primario y secundario en el sistema de diseño.
+
+2. **Enhance Touch Targets**  
+   - Verificar que todos los botones y elementos interactivos sean ≥48dp.  
+   - **Improvement:** Revisar componentes y ajustar padding o margin.
+
+3. **Augment Visual Distinction**  
+   - Alternar fondos de fila o insertar separadores en History para mejorar legibilidad.  
+   - **Improvement:** Implementar “zebra stripes” o divider components.
+
+4. **Provide Contextual Help**  
+   - Agregar tooltips o helper texts en campos del formulario.  
+   - **Improvement:** Incluir textos breves bajo cada TextField.
+
+5. **Conduct User Testing**  
+   - Planificar sesiones de usabilidad para validar flujo y accesibilidad.  
+   - **Improvement:** Recoger feedback de usuarios reales y ajustar iterativamente.
 
